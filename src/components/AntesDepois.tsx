@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 
 /**
- * Antes & Depois — Lash Lift, Brow Lamination e Brow + Lash.
+ * Antes & Depois — Lash Lifting, Brow Lamination e Brow + Lash.
  *
  * REGRA (pedida explicitamente pelo Studio): nunca inventar resultados
  * nem apresentar imagens de referência como se fossem trabalhos da
@@ -29,7 +29,7 @@ type Entry = {
 const antesDepoisEntries: Entry[] = [
   {
     id: "lash-lift",
-    title: "Lash Lift",
+    title: "Lash Lifting",
     description: "Curvatura e alongamento aparente das pestanas naturais.",
     photo: "/images/extensao-cilios/extensao-cilios-02.jpg",
   },

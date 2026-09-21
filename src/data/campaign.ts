@@ -1,5 +1,5 @@
 /**
- * CAMPANHA "LIFT DUPLO"
+ * CAMPANHA "LIFTING DUPLO"
  * ----------------------------------------------------------------
  * Lash Lifting + Brow Lamination na mesma sessão.
  *
@@ -21,12 +21,12 @@
  * ----------------------------------------------------------------
  */
 export const liftDuploCampaign = {
-  name: "LIFT DUPLO",
+  name: "LIFTING DUPLO",
   subtitle: "Dois detalhes. Um olhar completamente transformado.",
   services: "Lash Lifting + Brow Lamination",
   description:
     "Realce as pestanas e alinhe as sobrancelhas para um olhar mais aberto, definido e harmonioso.",
-  cta: "QUERO O MEU LIFT DUPLO",
+  cta: "QUERO O MEU LIFTING DUPLO",
   /** null = ainda não confirmado — não inventar. */
   price: null as string | null,
   /** null = ainda não há experiência Noona dedicada a este combo — não inventar. */

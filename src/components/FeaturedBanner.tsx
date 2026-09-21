@@ -5,7 +5,7 @@ import Button from "./Button";
 import { IconArrowRight } from "./Icons";
 
 /**
- * Campanha em destaque — "LIFT DUPLO" (Lash Lifting + Brow Lamination).
+ * Campanha em destaque — "LIFTING DUPLO" (Lash Lifting + Brow Lamination).
  * Ver `src/data/campaign.ts` para a explicação de por que o preço e o
  * link de marcação dedicados ainda ficam por confirmar.
  */

@@ -195,7 +195,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Transformações"
               title="Antes & Depois"
-              description="Lash Lift, Brow Lamination e a combinação dos dois — Lift Duplo."
+              description="Lash Lifting, Brow Lamination e a combinação dos dois — Lifting Duplo."
               align="center"
             />
           </AnimatedSection>
