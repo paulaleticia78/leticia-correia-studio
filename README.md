@@ -432,4 +432,15 @@ Nenhuma fotografia real já aprovada foi substituída ou removida — as novas f
 5. Captura de ecrã de uma app de câmara com grelha de enquadramento sobreposta — não é uma fotografia final, é a interface da câmara.
 
 Se a Letícia quiser usar alguma destas 5 no site (por exemplo, uma versão do voucher sem os nomes, ou o testemunho da Carolina como texto simples), é só pedir.
-site studio leticia correia
+
+## Atualização — Hero com foto da Letícia + faixa "Ambiente / Antes & Depois / Ensaio de Campanha"
+
+Com base numa imagem de referência (usada apenas como inspiração visual, sem copiar conteúdo/identidade de outro site):
+
+- **Hero**: a imagem principal passou de uma foto do ambiente do estúdio para o retrato real da Letícia sozinha (`leticia/leticia-retrato.jpg`), enquadrado com `object-cover` para não distorcer, adaptado a desktop e mobile pela mesma imagem responsiva.
+- **Novo componente `QuickHighlights.tsx`**, colocado logo abaixo do Hero na homepage, com 3 cartões:
+  - **Ambiente do Estúdio** → fotografia real (`studio/studio-sobre.jpg`), liga para `/sobre`.
+  - **Antes & Depois** → fotografia real de antes/depois já existente no projeto, liga para `/galeria`.
+  - **Ensaio de Campanha** → mantém-se honestamente como "Em breve" (sem simular uma campanha que ainda não existe), com a imagem `services/destaque.jpg` a baixa opacidade como fundo decorativo.
+
+Nada da estrutura geral, menu, links de marcação, preços ou outras secções foi alterado.

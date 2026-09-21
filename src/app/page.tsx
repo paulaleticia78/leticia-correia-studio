@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import QuickHighlights from "@/components/QuickHighlights";
 import SectionHeading from "@/components/SectionHeading";
 import AnimatedSection from "@/components/AnimatedSection";
 import Button from "@/components/Button";
@@ -41,6 +42,7 @@ export default function HomePage() {
     <>
       <LocalBusinessJsonLd />
       <Hero />
+      <QuickHighlights />
 
       {/* Escolhe o primeiro passo */}
       <section className="section-padding bg-cream-50">

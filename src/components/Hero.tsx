@@ -47,12 +47,12 @@ export default function Hero() {
 
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-gold-500/25 lg:aspect-[3/4]">
           <Image
-            src="/images/hero/hero-studio.jpg"
-            alt={`Ambiente do ${siteConfig.name}`}
+            src="/images/leticia/leticia-retrato.jpg"
+            alt={`Letícia Correia — ${siteConfig.name}`}
             fill
             priority
             sizes="(min-width: 1024px) 45vw, 90vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
         </div>
       </div>
