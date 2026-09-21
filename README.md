@@ -432,3 +432,4 @@ Nenhuma fotografia real já aprovada foi substituída ou removida — as novas f
 5. Captura de ecrã de uma app de câmara com grelha de enquadramento sobreposta — não é uma fotografia final, é a interface da câmara.
 
 Se a Letícia quiser usar alguma destas 5 no site (por exemplo, uma versão do voucher sem os nomes, ou o testemunho da Carolina como texto simples), é só pedir.
+site studio leticia correia
