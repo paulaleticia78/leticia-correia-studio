@@ -19,6 +19,7 @@ export default function SobrePage() {
         eyebrow="A nossa história"
         title="Sobre o Studio Letícia Correia"
         description="[INSERIR TEXTO DE APRESENTAÇÃO — história do studio, valores e o que o torna diferente.]"
+        image="/images/leticia/leticia-trabalhando.jpg"
       />
 
       <section className="section-padding bg-cream-50">

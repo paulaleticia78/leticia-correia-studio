@@ -444,3 +444,39 @@ Com base numa imagem de referência (usada apenas como inspiração visual, sem 
   - **Ensaio de Campanha** → mantém-se honestamente como "Em breve" (sem simular uma campanha que ainda não existe), com a imagem `services/destaque.jpg` a baixa opacidade como fundo decorativo.
 
 Nada da estrutura geral, menu, links de marcação, preços ou outras secções foi alterado.
+
+## Atualização — avaliações em carrossel, mais imagens, botões com mais cor, 7 novos links do Noona
+
+**1. Avaliações (`GoogleReviewsSection` + novo `ReviewsCarousel.tsx`)**
+Nova apresentação em carrossel premium: 3 cartões visíveis no desktop, 2 no mobile (com deslize nativo), avanço automático lento e suave, setas discretas para navegação manual, e o movimento pausa sempre que o utilizador interage (hover, toque ou clique nas setas), retomando pouco depois.
+**Nota honesta:** o Studio tem atualmente **apenas 1 avaliação de cliente confirmada** (Carolina Gomes). Mostrar "3 avaliações lado a lado" com só 1 texto real significaria repetir o mesmo depoimento 3 vezes — decidi não fazer isso, porque pareceria enganoso. Por isso, com 1 só testemunho, a secção mostra-o como um cartão único em destaque; assim que houver 2+ avaliações reais confirmadas em `src/data/testimonials.ts`, o carrossel completo (3 no desktop / 2 no mobile, com setas e auto-avanço) ativa-se automaticamente, sem precisar de mais alterações de código.
+
+**2. Mais imagens em cartões vazios**
+- `PageHero.tsx` (cabeçalho usado em Sobre, Serviços, Agendar, Galeria e Contactos) ganhou uma fotografia real de fundo, discreta (opacidade baixa), específica por página — antes era só texto sobre fundo liso.
+- O cartão de marcação do Noona (`BookingSection.tsx`, quando o widget embutido não está configurado) ganhou uma fotografia real de fundo muito subtil.
+
+**3. Foto principal da Letícia (Hero)**
+A moldura passou de cantos simplesmente arredondados para um formato em arco (topo semicircular, base com cantos bem arredondados) — mais sofisticado e feminino, mantendo a fotografia grande e em destaque, sem a transformar num círculo pequeno. Funciona em desktop e mobile.
+
+**4. Botões com mais cor**
+Os variantes `primary` e `dark` passaram a percorrer um degradê mais rico (bege → rosé → dourado, em vez de só bege → bege escuro), e ganharam um brilho/reflexo subtil que atravessa o botão ao passar o rato — muito discreto, sem parecer infantil. Mantém elevação, escala e feedback ao clicar.
+
+**5. Regresso do Noona ao site**
+Confirmei uma limitação técnica real: não é possível colocar um botão "← Voltar ao site" *dentro* da página do Noona, porque é um domínio externo que não controlamos (não há acesso ao código deles). A solução implementada, dentro do que é tecnicamente possível e seguro:
+- Todos os links de marcação já abrem em **nova aba** (mantendo a aba do site aberta e intacta).
+- Adicionei notas discretas junto aos botões de marcação principais (secção de Marcações, cartão do Noona, e página de cada serviço) a explicar isto claramente ao cliente: "Abre numa nova aba — esta página do site fica aberta, para voltares facilmente".
+- Não foi usado nenhum mecanismo para tentar fechar a aba à força (isso seria bloqueado pelos navegadores, como referiste).
+
+**6. Sete novos links diretos do Noona confirmados** — o catálogo de Sobrancelhas foi atualizado com nomes e preços reais lidos diretamente de cada página do Noona (nunca inventados):
+
+| Serviço (nome real no Noona) | Preço | Substituiu / acrescentou |
+|---|---|---|
+| Brow Lamination + Coloração | 35,00 € | atualizou "Brow Lamination" |
+| Brow Lamination com Design de Sobrancelhas | 30,00 € | novo (combo) |
+| Design Estratégico de Sobrancelhas | 14,00 € | atualizou "Design de Sobrancelhas" |
+| Threading Sobrancelhas | 12,00 € | novo |
+| Henna | 8,00 € | novo |
+| Nanopigmentação | 150,00 € | atualizou "Micropigmentação" |
+| Retoque Anual Nano | 120,00 € | novo |
+
+**Procedimento Labial continua sem link direto confirmado** (nenhum dos links fornecidos até agora corresponde a um serviço de lábios) — mantém-se com o link geral do Noona e preço por confirmar, exatamente como nos avisos anteriores. Nada dos links, preços, contactos ou estrutura já aprovados foi alterado.

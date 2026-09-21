@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 import Button from "./Button";
@@ -68,6 +69,10 @@ export default function BookingSection() {
                 </div>
               ))}
             </div>
+            <p className="mt-3 px-1 text-xs text-ink-500">
+              Cada marcação abre o {siteConfig.bookingPlatform} numa nova aba — esta página do site
+              fica aberta, para voltares facilmente depois de marcar.
+            </p>
           </AnimatedSection>
 
           {/* Área do sistema de marcações (Noona) */}
@@ -82,37 +87,51 @@ export default function BookingSection() {
                 />
               </div>
             ) : (
-              <div className="flex h-full flex-col gap-6 rounded-[1.75rem] border border-gold-500/25 bg-white p-8 shadow-card">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-300/40 font-display text-lg text-clay-600">
-                    N
-                  </span>
-                  <div>
-                    <p className="font-display text-lg text-ink-900">Marcações por {siteConfig.bookingPlatform}</p>
-                    <p className="text-xs text-ink-600">Plataforma oficial de marcações do Studio</p>
+              <div className="relative flex h-full flex-col gap-6 overflow-hidden rounded-[1.75rem] border border-gold-500/25 bg-white p-8 shadow-card">
+                <Image
+                  src="/images/detalhes/detalhe-trabalho-04.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 90vw"
+                  className="object-cover opacity-[0.07]"
+                />
+                <div className="relative z-10 flex h-full flex-col gap-6">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-300/40 font-display text-lg text-clay-600">
+                      N
+                    </span>
+                    <div>
+                      <p className="font-display text-lg text-ink-900">Marcações por {siteConfig.bookingPlatform}</p>
+                      <p className="text-xs text-ink-600">Plataforma oficial de marcações do Studio</p>
+                    </div>
                   </div>
+                  <p className="text-sm leading-relaxed text-ink-700">
+                    Escolha o dia, a hora e o profissional diretamente na plataforma{" "}
+                    {siteConfig.bookingPlatform}, de forma simples e segura — em poucos toques, no
+                    telemóvel ou no computador.
+                  </p>
+                  <ul className="flex flex-col gap-2.5 text-sm text-ink-700">
+                    <li className="flex items-center gap-2">
+                      <IconCheck className="h-4 w-4 text-clay-600" /> Confirmação imediata
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <IconCheck className="h-4 w-4 text-clay-600" /> Lembretes automáticos
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <IconCheck className="h-4 w-4 text-clay-600" /> Funciona perfeitamente no telemóvel
+                    </li>
+                  </ul>
+                  <Button href={siteConfig.bookingUrl} className="mt-auto w-full">
+                    <span className="flex items-center gap-2">
+                      {siteConfig.ctaPrimary} <IconArrowRight />
+                    </span>
+                  </Button>
+                  <p className="text-center text-xs text-ink-500">
+                    Abre numa nova aba — para voltar ao {siteConfig.name}, basta fechar essa aba ou
+                    trocar de volta para esta janela.
+                  </p>
                 </div>
-                <p className="text-sm leading-relaxed text-ink-700">
-                  Escolha o dia, a hora e o profissional diretamente na plataforma{" "}
-                  {siteConfig.bookingPlatform}, de forma simples e segura — em poucos toques, no
-                  telemóvel ou no computador.
-                </p>
-                <ul className="flex flex-col gap-2.5 text-sm text-ink-700">
-                  <li className="flex items-center gap-2">
-                    <IconCheck className="h-4 w-4 text-clay-600" /> Confirmação imediata
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <IconCheck className="h-4 w-4 text-clay-600" /> Lembretes automáticos
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <IconCheck className="h-4 w-4 text-clay-600" /> Funciona perfeitamente no telemóvel
-                  </li>
-                </ul>
-                <Button href={siteConfig.bookingUrl} className="mt-auto w-full">
-                  <span className="flex items-center gap-2">
-                    {siteConfig.ctaPrimary} <IconArrowRight />
-                  </span>
-                </Button>
                 {/* Nota para quem gere o site — não visível como aviso de erro, apenas comentário técnico. */}
                 {/* Para embutir o widget oficial do Noona diretamente nesta secção, gera o código
                     de iframe em Noona HQ → Online Bookings → Visibility → "Allow online bookings on

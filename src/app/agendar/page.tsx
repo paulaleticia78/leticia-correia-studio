@@ -20,6 +20,7 @@ export default function AgendarPage() {
         eyebrow="Marcação"
         title="Reserve o seu momento"
         description="Escolhe a forma mais confortável para marcares a tua sessão no Studio Letícia Correia."
+        image="/images/detalhes/detalhe-produtos.jpg"
       />
 
       <BookingSection />

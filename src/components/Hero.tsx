@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-gold-500/25 lg:aspect-[3/4]">
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-t-[999px] rounded-b-[2.5rem] shadow-soft ring-1 ring-gold-500/25 lg:aspect-[3/4]">
           <Image
             src="/images/leticia/leticia-retrato.jpg"
             alt={`Letícia Correia — ${siteConfig.name}`}

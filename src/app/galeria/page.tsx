@@ -16,6 +16,7 @@ export default function GaleriaPage() {
         eyebrow="Portefólio"
         title="Galeria"
         description="Uma seleção de trabalhos realizados no Studio Letícia Correia."
+        image="/images/portfolio/pestanas-04.jpg"
       />
 
       <section className="section-padding bg-cream-50">

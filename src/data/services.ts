@@ -8,22 +8,24 @@
  * Studio não ofereça, nem preços, nem links.
  *
  * LIGAÇÃO DIRETA POR SERVIÇO (Noona):
- * Os 13 serviços de Pestanas abaixo têm `bookingUrl` confirmado —
- * cada um foi identificado a partir do link fornecido, lendo o nome
- * e o preço reais mostrados nessa página de marcação do Noona
- * (noona.pt/leticiacorreiastudio/experience/...). Nome e preço vêm
+ * 19 dos 20 serviços abaixo têm `bookingUrl` confirmado — 12 de Pestanas
+ * + 7 de Sobrancelhas, cada um identificado a partir do link fornecido,
+ * lendo o nome e o preço reais mostrados nessa página de marcação do
+ * Noona (noona.pt/leticiacorreiastudio/experience/...). Nome e preço vêm
  * exatamente do que está publicado nessas páginas — não foram
- * inventados nem estimados.
+ * inventados nem estimados. Nota: o catálogo real do Noona é mais
+ * granular do que a estrutura inicial pensada para o site (ex.: em vez
+ * de um único "Brow Lamination" e um único "Design de Sobrancelhas",
+ * existem variantes próprias como "Brow Lamination + Coloração",
+ * "Brow Lamination com Design de Sobrancelhas", "Design Estratégico",
+ * "Threading", "Henna", "Nanopigmentação" e "Retoque Anual Nano") — por
+ * isso os nomes/preços destes serviços foram atualizados para
+ * corresponder exatamente ao que está confirmado no Noona.
  *
- * Brow Lamination (standalone), Design de Sobrancelhas, Procedimento
- * Labial e Micropigmentação NÃO têm um link direto confirmado entre
- * os fornecidos — apenas "Extensão volume Brasil/egípcio + Brow
- * Lamination" (um combo) menciona brow lamination, mas como parte de
- * outro serviço, não como o próprio Brow Lamination. Por isso, para
- * estes 4 serviços, `bookingUrl` fica por preencher (o botão usa o
- * link geral do Noona como alternativa) e `price` fica como
- * placeholder — nunca inventados. Ver `SERVICOS_SEM_LINK_DIRETO`
- * abaixo para a lista exata a corrigir.
+ * Procedimento Labial é o ÚNICO serviço sem link direto confirmado entre
+ * os fornecidos até agora. Por isso `bookingUrl` fica por preencher (o
+ * botão usa o link geral do Noona como alternativa) e `price` fica como
+ * placeholder — nunca inventados. Ver `SERVICOS_SEM_LINK_DIRETO` abaixo.
  *
  * Categorias fixas: "Pestanas", "Sobrancelhas", "Lábios".
  * ----------------------------------------------------------------
@@ -203,62 +205,113 @@ export const services: Service[] = [
     highlights: ["Remoção segura e profissional"],
   },
 
-  // ---- Sobrancelhas / Lábios — sem link direto confirmado ----
-  // Nenhum dos 12 links fornecidos corresponde a estes serviços (apenas o combo
-  // acima menciona "Brow Lamination", como parte de outro serviço). Por isso o
-  // botão "Agendar" usa o link geral do Noona (siteConfig.bookingUrl) até a
-  // Letícia confirmar o link direto de cada um — ver SERVICOS_SEM_LINK_DIRETO.
+  // ---- Sobrancelhas — links diretos confirmados (Noona) ----
   {
     slug: "brow-lamination",
-    name: "Brow Lamination",
+    name: "Brow Lamination + Coloração",
     category: "Sobrancelhas",
     shortDescription:
-      "Alinhamento e disciplina dos pelos para sobrancelhas mais cheias e definidas.",
+      "Alinhamento e disciplina dos pelos para sobrancelhas mais cheias e definidas, com coloração.",
     longDescription:
-      "O Brow Lamination disciplina e alinha os pelos da sobrancelha na direção desejada, criando um efeito mais cheio, definido e uniforme, com um acabamento natural.",
+      "O Brow Lamination disciplina e alinha os pelos da sobrancelha na direção desejada, criando um efeito mais cheio, definido e uniforme, com coloração incluída para um acabamento natural.",
     duration: "[INSERIR DURAÇÃO]",
-    price: "[INSERIR PREÇO]",
+    price: "35,00 €",
     image: "/images/brow-lamination/brow-lamination-ia-01.jpg",
     featured: true,
+    bookingUrl: "https://noona.pt/leticiacorreiastudio/experience/UwBacE0HX6KbImIw6wNvNJij",
     highlights: [
       "Sobrancelhas mais cheias e definidas",
-      "Efeito duradouro",
+      "Inclui coloração",
       "Acabamento natural",
     ],
   },
   {
+    slug: "brow-lamination-com-design",
+    name: "Brow Lamination com Design de Sobrancelhas",
+    category: "Sobrancelhas",
+    shortDescription: "Pacote combinado: Brow Lamination + design de sobrancelhas.",
+    longDescription:
+      "Pacote combinado que junta o Brow Lamination (alinhamento e disciplina dos pelos) com um design de sobrancelhas personalizado, na mesma sessão.",
+    duration: "[INSERIR DURAÇÃO]",
+    price: "30,00 €",
+    image: "/images/brow-lamination/brow-lamination-02.jpg",
+    bookingUrl: "https://noona.pt/leticiacorreiastudio/experience/5iWyrdEDvFPMACSEnUTkcDC2",
+    highlights: ["Brow Lamination + Design numa só sessão", "Resultado alinhado e simétrico"],
+  },
+  {
     slug: "design-de-sobrancelhas",
-    name: "Design de Sobrancelhas",
+    name: "Design Estratégico de Sobrancelhas",
     category: "Sobrancelhas",
     shortDescription:
-      "Correção de forma e simetria adaptada ao formato do rosto.",
+      "Limpeza (linha ou pinça) com desenho personalizado, mais spa de sobrancelhas.",
     longDescription:
-      "Um design de sobrancelhas personalizado, que respeita a estrutura natural do rosto e realça o olhar com simetria e precisão.",
+      "Design de sobrancelhas personalizado, com limpeza feita a linha ou pinça e desenho adaptado ao formato do rosto, complementado com um spa de sobrancelhas.",
     duration: "[INSERIR DURAÇÃO]",
-    price: "[INSERIR PREÇO]",
+    price: "14,00 €",
     image: "/images/sobrancelhas/sobrancelhas-ia-01.jpg",
+    bookingUrl: "https://noona.pt/leticiacorreiastudio/experience/sCbeBvH8JmGa4UwG9AHZmkvk",
     highlights: [
-      "Estudo de simetria facial",
-      "Técnica personalizada",
-      "Manutenção regular recomendada",
+      "Limpeza a linha ou pinça",
+      "Desenho personalizado",
+      "Inclui spa de sobrancelhas",
     ],
   },
   {
-    slug: "micropigmentacao",
-    name: "Micropigmentação",
+    slug: "threading-sobrancelhas",
+    name: "Threading Sobrancelhas",
     category: "Sobrancelhas",
-    shortDescription: "Resultados naturais e duradouros.",
-    longDescription:
-      "Micropigmentação de sobrancelhas com técnica personalizada, para um resultado natural, duradouro e adaptado à simetria facial.",
+    shortDescription: "Design feito a linha (técnica de threading).",
+    longDescription: "Design de sobrancelhas feito com a técnica de threading (linha), para um contorno preciso.",
     duration: "[INSERIR DURAÇÃO]",
-    price: "[INSERIR PREÇO]",
+    price: "12,00 €",
+    image: "/images/sobrancelhas/sobrancelhas-detalhe.jpg",
+    bookingUrl: "https://noona.pt/leticiacorreiastudio/experience/CCN3wbgqoptOBzbm8rE4q5Iy",
+    highlights: ["Design feito a linha", "Contorno preciso"],
+  },
+  {
+    slug: "henna-sobrancelhas",
+    name: "Henna",
+    category: "Sobrancelhas",
+    shortDescription: "Coloração natural que realça o desenho das sobrancelhas.",
+    longDescription: "Aplicação de henna para realçar a cor e o desenho das sobrancelhas, com efeito natural.",
+    duration: "[INSERIR DURAÇÃO]",
+    price: "8,00 €",
+    image: "/images/sobrancelhas/design-sobrancelhas-01.jpg",
+    bookingUrl: "https://noona.pt/leticiacorreiastudio/experience/T8UMDs6TO9ha0pnC4lmDosjD",
+    highlights: ["Coloração natural", "Realça o desenho da sobrancelha"],
+  },
+  {
+    slug: "micropigmentacao",
+    name: "Nanopigmentação",
+    category: "Sobrancelhas",
+    shortDescription: "Resultados naturais e duradouros — dura cerca de 1 ano.",
+    longDescription:
+      "Nanopigmentação de sobrancelhas, técnica semipermanente que preenche falhas imitando fios naturais, com duração aproximada de 1 ano. Inclui retoque de cortesia 30 dias depois.",
+    duration: "[INSERIR DURAÇÃO]",
+    price: "150,00 €",
     image: "/images/micropigmentacao/micropigmentacao-01.jpg",
+    featured: true,
+    bookingUrl: "https://noona.pt/leticiacorreiastudio/experience/yaVSXkzc0PoCqja6feYYqIFI",
     highlights: [
-      "Resultado natural e duradouro",
-      "Técnica personalizada",
-      "Reduz a rotina de maquilhagem diária",
+      "Dura cerca de 1 ano",
+      "Retoque de cortesia aos 30 dias",
+      "Preenche falhas com efeito de fio natural",
     ],
   },
+  {
+    slug: "retoque-anual-nano",
+    name: "Retoque Anual Nano",
+    category: "Sobrancelhas",
+    shortDescription: "Retoque anual para quem já tem Nanopigmentação.",
+    longDescription: "Retoque anual da Nanopigmentação, para manter o resultado ao longo do tempo.",
+    duration: "[INSERIR DURAÇÃO]",
+    price: "120,00 €",
+    image: "/images/micropigmentacao/micropigmentacao-01.jpg",
+    bookingUrl: "https://noona.pt/leticiacorreiastudio/experience/ZfMUz4UK6Jrg2VrtQKOU3OBI",
+    highlights: ["Manutenção anual da Nanopigmentação"],
+  },
+
+  // ---- Lábios — sem link direto confirmado ----
   {
     slug: "procedimento-labial",
     name: "Procedimento Labial",
@@ -282,12 +335,7 @@ export const services: Service[] = [
  * fornecidos (usam siteConfig.bookingUrl como alternativa). Corrigir aqui
  * assim que a Letícia confirmar o link direto de cada um no Noona.
  */
-export const SERVICOS_SEM_LINK_DIRETO = [
-  "brow-lamination",
-  "design-de-sobrancelhas",
-  "micropigmentacao",
-  "procedimento-labial",
-];
+export const SERVICOS_SEM_LINK_DIRETO = ["procedimento-labial"];
 
 /**
  * Categorias que o Studio menciona no posicionamento (Pestanas /

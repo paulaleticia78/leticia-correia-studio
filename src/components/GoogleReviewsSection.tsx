@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site";
 import AnimatedSection from "./AnimatedSection";
 import Button from "./Button";
 import { IconStar } from "./Icons";
+import ReviewsCarousel from "./ReviewsCarousel";
 
 /**
  * Avaliações do Google — secção premium.
@@ -60,27 +61,9 @@ export default function GoogleReviewsSection() {
         </AnimatedSection>
 
         {testimonials.length > 0 && (
-          <div className="mx-auto mt-12 grid max-w-4xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <AnimatedSection
-                key={t.id}
-                delay={120 + i * 90}
-                className="flex flex-col gap-4 rounded-[1.5rem] border border-gold-300/40 bg-white/80 p-6 shadow-card backdrop-blur-sm"
-              >
-                <span className="flex gap-0.5 text-gold-500" aria-hidden="true">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <IconStar key={s} className="h-3.5 w-3.5" />
-                  ))}
-                </span>
-                <blockquote className="text-sm leading-relaxed text-ink-800">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <figcaption className="mt-auto text-xs font-semibold uppercase tracking-wide text-rose-600">
-                  {t.author} · {t.source}
-                </figcaption>
-              </AnimatedSection>
-            ))}
-          </div>
+          <AnimatedSection delay={120} className="mx-auto max-w-5xl">
+            <ReviewsCarousel testimonials={testimonials} />
+          </AnimatedSection>
         )}
 
         <AnimatedSection delay={200} className="mt-12 flex justify-center">

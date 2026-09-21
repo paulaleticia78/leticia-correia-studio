@@ -101,6 +101,9 @@ export default function ServiceDetailPage({ params }: Props) {
                 {siteConfig.ctaWhatsapp}
               </Button>
             </div>
+            <p className="text-xs text-ink-faint text-ink-500">
+              A marcação abre em nova aba — esta página do site fica aberta, para voltares facilmente.
+            </p>
           </AnimatedSection>
         </div>
       </section>
