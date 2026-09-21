@@ -19,15 +19,15 @@ export default function SobrePage() {
         eyebrow="A nossa história"
         title="Sobre o Studio Letícia Correia"
         description="[INSERIR TEXTO DE APRESENTAÇÃO — história do studio, valores e o que o torna diferente.]"
-        image="/images/leticia/leticia-trabalhando.jpg"
+        image="/images/leticia/leticia-trabalhando-02.jpg"
       />
 
       <section className="section-padding bg-cream-50">
         <div className="container-content grid items-center gap-12 lg:grid-cols-2">
           <AnimatedSection className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-soft">
             <Image
-              src="/images/studio/studio-sobre.jpg"
-              alt={`Interior do ${siteConfig.name}`}
+              src="/images/extensao-cilios/extensao-cilios-02.jpg"
+              alt={`Cuidado ao detalhe no ${siteConfig.name}`}
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover"

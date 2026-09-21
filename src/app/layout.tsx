@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SplashIntro from "@/components/SplashIntro";
 import { siteConfig } from "@/config/site";
 
 const display = Cormorant_Garamond({
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-PT" className={`${display.variable} ${sans.variable}`}>
       <body className="font-sans antialiased">
+        <SplashIntro />
         <Header />
         <main>{children}</main>
         <Footer />

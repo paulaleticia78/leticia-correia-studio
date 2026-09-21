@@ -20,7 +20,7 @@ export default function ServicosPage() {
         eyebrow="Tratamentos"
         title="Serviços"
         description="Sobrancelhas, pestanas e cuidado facial, com técnica e atenção ao detalhe."
-        image="/images/detalhes/detalhe-trabalho.jpg"
+        image="/images/detalhes/detalhe-trabalho-03.jpg"
       />
 
       <section className="section-padding bg-cream-50">

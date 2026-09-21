@@ -20,7 +20,7 @@ export default function ContactosPage() {
         eyebrow="Fala connosco"
         title="Contactos"
         description="Estamos disponíveis por WhatsApp, telefone ou presencialmente."
-        image="/images/studio/studio-ambiente.jpg"
+        image="/images/leticia/leticia-retrato-02.jpg"
       />
 
       <section className="section-padding bg-cream-50">

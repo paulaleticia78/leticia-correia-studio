@@ -480,3 +480,63 @@ Confirmei uma limitação técnica real: não é possível colocar um botão "�
 | Retoque Anual Nano | 120,00 € | novo |
 
 **Procedimento Labial continua sem link direto confirmado** (nenhum dos links fornecidos até agora corresponde a um serviço de lábios) — mantém-se com o link geral do Noona e preço por confirmar, exatamente como nos avisos anteriores. Nada dos links, preços, contactos ou estrutura já aprovados foi alterado.
+
+## Atualização — "Nova atualização visual" (Lift Duplo, Antes & Depois, splash, correção de imagens)
+
+### Aviso importante: correção de imagens que afinal eram placeholders
+
+Antes de avançar com este pedido, revi diretamente (abrindo cada ficheiro, não só o nome) todas as imagens em `public/images/`, porque ia precisar de fotografias reais para o "Antes & Depois" e para a campanha "Lift Duplo". Essa revisão revelou que **várias imagens do projeto — nomeadamente algumas que tinha ligado na atualização anterior a serviços e cabeçalhos de página, como se fossem fotografias reais aprovadas — eram na verdade gráficos placeholder** (fundo gradiente bege/rosé com um ícone de linha fina e o texto "PLACEHOLDER — SUBSTITUIR POR FOTO REAL"), sem que o nome do ficheiro o revelasse. Isto não tinha sido verificado visualmente antes de as usar, e é um erro meu que corrijo e explico aqui com total transparência.
+
+Ficheiros que eram placeholder e foram corrigidos, substituindo por fotografias reais (ou geradas especificamente para o projeto, já existentes) sempre que o tema correspondia:
+
+| Onde estava a ser usado | Placeholder (removido) | Substituído por |
+|---|---|---|
+| Serviço "Brow Lamination com Design de Sobrancelhas" | `brow-lamination-02.jpg` | `brow-lamination-ia-01.jpg` |
+| Serviço "Threading Sobrancelhas" | `sobrancelhas-detalhe.jpg` | `sobrancelhas-ia-01.jpg` |
+| Serviço "Henna" | `design-sobrancelhas-01.jpg` | `extensao-cilios-01.jpg` |
+| Cabeçalho de `/sobre` | `leticia-trabalhando.jpg` | `leticia-trabalhando-02.jpg` (real) |
+| Cabeçalho de `/servicos` | `detalhe-trabalho.jpg` | `detalhe-trabalho-03.jpg` (real) |
+| Cabeçalho de `/contactos` | `studio-ambiente.jpg` | `leticia-retrato-02.jpg` (real) |
+| Imagem "Interior" em `/sobre` | `studio-sobre.jpg` | `extensao-cilios-02.jpg` (real) |
+| Cartão "Ambiente do Estúdio" (`QuickHighlights`) | `studio-sobre.jpg` | `leticia-trabalhando-02.jpg`, cartão renomeado para "No Estúdio" |
+| Cartão "Antes & Depois" (`QuickHighlights`) | usava `beforeAfterItems[0]`, que era placeholder | substituído por um cartão "Portefólio" com foto real |
+| "Sobre o Studio" (homepage) | `studio-ambiente.jpg` | `detalhe-produtos.jpg` (real) |
+| "Ensaio de Campanha" (fundo decorativo) | `services/destaque.jpg` | `brow-lamination-ia-01.jpg` |
+| Galeria (`gallery.ts`, 6 dos 8 itens) | `portfolio/sobrancelhas-01/02/03.jpg`, `pestanas-01/02/03.jpg` | fotografias reais/geradas já no projeto (`sobrancelhas-ia-01`, `lash-lifting-ia-01`, `brow-lamination-ia-01`, `extensao-cilios-01/02/04`) |
+
+**Gap que não foi possível corrigir com uma foto genuína:** não existe, entre as fotografias reais já enviadas ao projeto, nenhum plano aberto do interior/ambiente do estúdio (uma sala, uma bancada, uma vista do espaço). Por isso, em vez de continuar a usar uma imagem placeholder ou fingir uma foto de ambiente com uma imagem que não é isso, removi essa alegação onde ela não era suportada por uma foto real (ex: o cartão passou a chamar-se "No Estúdio" em vez de "Ambiente do Estúdio", com uma foto real de trabalho em curso). **Se a Letícia tiver ou puder tirar 2–3 fotos do espaço (receção, cadeira de tratamento, bancada de produtos), envie-as que ficam prontas a substituir em minutos.**
+
+Todos os ficheiros placeholder confirmados (incluindo os que já não estavam a ser usados em lado nenhum) foram removidos de `public/images/`, para que não voltem a ser usados por engano no futuro.
+
+### 1. Antes & Depois — Lash Lift, Brow Lamination, Brow + Lash
+
+Novo componente `AntesDepois.tsx`. **Não existe, entre as fotografias reais já fornecidas, nenhum par genuíno de "antes" e "depois" do mesmo procedimento** para nenhum dos três tratamentos — por isso, tal como já tinha sido feito antes com o "Ensaio de Campanha", optei por não inventar um resultado nem apresentar fotos soltas como se fossem um antes/depois real. Cada cartão mostra, para já, uma fotografia real do tratamento com uma etiqueta honesta "Em preparação". O componente já tem o efeito de comparação (slider arrastável, ponteiro ↔, funciona com rato e toque) pronto e funcional — assim que a Letícia tiver um par real de fotos "antes" e "depois" do mesmo procedimento, basta preencher `before`/`after` em `antesDepoisEntries` (`src/components/AntesDepois.tsx`) que o slider passa a aparecer automaticamente, sem mais alterações de código.
+
+### 2. Campanha "Lift Duplo"
+
+Novo `src/data/campaign.ts` + `FeaturedBanner.tsx` reformulado: título "LIFT DUPLO", subtítulo, serviços incluídos e texto exatamente como pedido, botão "QUERO O MEU LIFT DUPLO", fotografia de destaque (`extensao-cilios-03.jpg`, um olho com sobrancelha e pestanas visíveis — combina os dois tratamentos), fundo bege/nude com detalhes dourados/champagne.
+
+- **Preço**: o Noona não tem, até agora, uma experiência de marcação específica para "Lash Lifting + Brow Lamination". O combo mais próximo confirmado ("Extensão Volume Brasil/Egípcio + Brow Lamination", 65,00 €) é um serviço diferente (extensão, não lifting), por isso o preço não foi reaproveitado — seria inventar. O cartão mostra "Preço a confirmar" e o campo `price` em `campaign.ts` fica pronto a preencher assim que houver um valor definido.
+- **Botão de marcação**: pela mesma razão, usa o link geral do Noona (`siteConfig.bookingUrl`), com uma nota a pedir para escolher os dois tratamentos na marcação. Assim que existir uma experiência Noona dedicada a este combo, basta colar o link em `bookingUrl` no mesmo ficheiro.
+
+### 3. Imagens em cartões vazios
+
+Os 4 cartões de "A Experiência Letícia Correia" (`ExperienceSection.tsx`) — que eram só ícone + texto — ganharam uma fotografia real de fundo, muito discreta (8% de opacidade), com uma pequena animação de zoom ao passar o rato.
+
+### 4. Abertura do site — "Entrar no Studio"
+
+Novo `SplashIntro.tsx`: ao abrir o site pela primeira vez numa sessão do navegador, mostra "LETÍCIA CORREIA / STUDIO", a frase "Beleza real, em cada detalhe." e o botão "Entrar no Studio" (com o mesmo brilho/hover premium dos outros botões). Ao clicar, a splash desvanece suavemente (~0,5s) e não volta a aparecer nessa sessão (`sessionStorage`) — não aparece em cada página, só na primeira visita. Não atrasa o carregamento real do site (o conteúdo da página já está por baixo, pronto) e respeita "reduzir movimento" do sistema operativo. Em navegadores sem JavaScript, a splash simplesmente não aparece e o site funciona normalmente.
+
+### 5. Mais vida e responsividade
+
+O trabalho de cor/microanimações já estava em grande parte feito na atualização anterior (botões com degradê e brilho, `AnimatedSection` a animar entrada ao scroll); esta ronda ficou focada em honestidade de imagens e nas peças novas pedidas. Todas as novas secções (Lift Duplo, Antes & Depois, splash, cartões da Experiência) foram construídas com as mesmas classes responsivas usadas no resto do site (grelhas que colapsam em mobile, texto e botões com tamanho tátil adequado).
+
+### Verificação final desta ronda
+
+- ✅ `tsc --noEmit` (verificação de sintaxe) sem erros.
+- ✅ Todos os caminhos `/images/...` referenciados no código existem em `public/images/`.
+- ✅ Nenhuma classe de fundo escuro (`bg-black`, `dark:`, etc.) introduzida.
+- ✅ Sem `slug` nem `bookingUrl` duplicados em `services.ts`.
+- ✅ Sem links internos `/servicos/<slug>` partidos.
+- ✅ Todas as imagens confirmadas como reais/geradas — nenhum placeholder continua ligado ao código (os ficheiros placeholder foram removidos de `public/images/`).
+- Serviços, preços, links do Noona já confirmados, contactos e estrutura principal do site **não foram alterados**.

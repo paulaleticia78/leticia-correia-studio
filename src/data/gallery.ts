@@ -27,14 +27,12 @@ export type GalleryItem = {
 };
 
 export const galleryItems: GalleryItem[] = [
-  { id: "g1", src: "/images/portfolio/sobrancelhas-01.jpg", alt: "Design de sobrancelhas — Studio Letícia Correia", category: "sobrancelhas", aspect: "portrait" },
-  { id: "g2", src: "/images/portfolio/pestanas-01.jpg", alt: "Lash Lifting — Studio Letícia Correia", category: "pestanas", aspect: "square" },
-  { id: "g3", src: "/images/portfolio/sobrancelhas-02.jpg", alt: "Brow Lamination — Studio Letícia Correia", category: "sobrancelhas", aspect: "landscape" },
-  { id: "g4", src: "/images/portfolio/pestanas-02.jpg", alt: "Resultado de Lash Lifting — Studio Letícia Correia", category: "pestanas", aspect: "portrait" },
-  { id: "g5", src: "/images/antes-depois/sobrancelhas-antes-depois-01.jpg", alt: "Antes e depois — sobrancelhas, Studio Letícia Correia", category: "antes-depois", aspect: "landscape" },
-  { id: "g6", src: "/images/antes-depois/pestanas-antes-depois-01.jpg", alt: "Antes e depois — Lash Lifting, Studio Letícia Correia", category: "antes-depois", aspect: "landscape" },
-  { id: "g7", src: "/images/portfolio/sobrancelhas-03.jpg", alt: "Detalhe de sobrancelhas — Studio Letícia Correia", category: "sobrancelhas", aspect: "square" },
-  { id: "g8", src: "/images/portfolio/pestanas-03.jpg", alt: "Detalhe de pestanas — Studio Letícia Correia", category: "pestanas", aspect: "portrait" },
+  { id: "g1", src: "/images/sobrancelhas/sobrancelhas-ia-01.jpg", alt: "Design de sobrancelhas — Studio Letícia Correia", category: "sobrancelhas", aspect: "portrait" },
+  { id: "g2", src: "/images/lash-lifting/lash-lifting-ia-01.jpg", alt: "Lash Lifting — Studio Letícia Correia", category: "pestanas", aspect: "square" },
+  { id: "g3", src: "/images/brow-lamination/brow-lamination-ia-01.jpg", alt: "Brow Lamination — Studio Letícia Correia", category: "sobrancelhas", aspect: "landscape" },
+  { id: "g4", src: "/images/extensao-cilios/extensao-cilios-04.jpg", alt: "Resultado de extensão de pestanas — Studio Letícia Correia", category: "pestanas", aspect: "portrait" },
+  { id: "g7", src: "/images/extensao-cilios/extensao-cilios-01.jpg", alt: "Detalhe do olhar — Studio Letícia Correia", category: "sobrancelhas", aspect: "square" },
+  { id: "g8", src: "/images/extensao-cilios/extensao-cilios-02.jpg", alt: "Detalhe de pestanas — Studio Letícia Correia", category: "pestanas", aspect: "portrait" },
   { id: "g9", src: "/images/portfolio/pestanas-04.jpg", alt: "Sessão de pestanas em curso — Studio Letícia Correia", category: "pestanas", aspect: "portrait" },
   { id: "g10", src: "/images/portfolio/pestanas-05.jpg", alt: "Cuidado no detalhe durante o tratamento de pestanas — Studio Letícia Correia", category: "pestanas", aspect: "portrait" },
 ];
@@ -44,7 +42,16 @@ export const galleryFilters: { id: GalleryCategory | "todos"; label: string }[] 
   { id: "pestanas", label: "Pestanas" },
   { id: "sobrancelhas", label: "Sobrancelhas" },
   { id: "labios", label: "Lábios" },
-  { id: "antes-depois", label: "Antes & Depois" },
 ];
 
-export const beforeAfterItems: GalleryItem[] = galleryItems.filter((i) => i.category === "antes-depois");
+/**
+ * Antes & Depois: por enquanto não existem, entre as fotografias reais
+ * já fornecidas ao projeto, pares genuínos de "antes" e "depois" do
+ * mesmo procedimento — por isso esta lista fica vazia em vez de simular
+ * uma comparação com fotos que não formam um par real. A secção
+ * "Antes & Depois" do site (`AntesDepois.tsx`) mostra isto de forma
+ * honesta, com fotografias reais de cada tratamento e uma nota "em
+ * preparação", pronta para ligar um par real assim que existir (ver
+ * `antesDepoisEntries` em `AntesDepois.tsx`).
+ */
+export const beforeAfterItems: GalleryItem[] = [];

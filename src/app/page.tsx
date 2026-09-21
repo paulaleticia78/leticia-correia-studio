@@ -9,7 +9,7 @@ import ServiceCard from "@/components/ServiceCard";
 import FeaturedBanner from "@/components/FeaturedBanner";
 import BookingSection from "@/components/BookingSection";
 import GoogleReviewsSection from "@/components/GoogleReviewsSection";
-import BeforeAfter from "@/components/BeforeAfter";
+import AntesDepois from "@/components/AntesDepois";
 import ExperienceSection from "@/components/ExperienceSection";
 import Faq from "@/components/Faq";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
@@ -79,8 +79,8 @@ export default function HomePage() {
           </AnimatedSection>
           <AnimatedSection delay={100} className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-soft">
             <Image
-              src="/images/studio/studio-ambiente.jpg"
-              alt={`Ambiente do ${siteConfig.name}`}
+              src="/images/detalhes/detalhe-produtos.jpg"
+              alt={`Cuidado e atenção ao detalhe no ${siteConfig.name}`}
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover"
@@ -192,11 +192,16 @@ export default function HomePage() {
       <section className="section-padding bg-cream-50">
         <div className="container-content">
           <AnimatedSection>
-            <SectionHeading eyebrow="Transformações" title="Antes & Depois" align="center" />
+            <SectionHeading
+              eyebrow="Transformações"
+              title="Antes & Depois"
+              description="Lash Lift, Brow Lamination e a combinação dos dois — Lift Duplo."
+              align="center"
+            />
           </AnimatedSection>
           <div className="mt-12">
             <AnimatedSection>
-              <BeforeAfter />
+              <AntesDepois />
             </AnimatedSection>
           </div>
         </div>
